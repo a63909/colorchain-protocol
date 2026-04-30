@@ -1,0 +1,13 @@
+{
+  "message_type": "public-interest-update",
+  "content": "EVERYONE MUST ACT NOW!!! Do not ignore this update. Forward now to every contact right now!!!",
+  "example_trust_metadata": {
+    "spam_score": 0.05,
+    "duplication_risk": 0.05,
+    "manipulation_risk": 0.61,
+    "trust_signal": "medium",
+    "flags": ["uppercase-emphasis", "excessive-exclamation", "suspicious-call-to-action"],
+    "explanation": "The reference scorer assigned a medium signal because it detected uppercase-emphasis, excessive-exclamation, and suspicious-call-to-action."
+  },
+  "note": "Neutral civic example showing manipulation-risk language without making political claims."
+}

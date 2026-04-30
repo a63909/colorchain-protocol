@@ -1,0 +1,13 @@
+{
+  "message_type": "public-interest-update",
+  "content": "Community update: the local volunteer station is open for water distribution from 18:00 to 20:00.",
+  "example_trust_metadata": {
+    "spam_score": 0.05,
+    "duplication_risk": 0.05,
+    "manipulation_risk": 0.05,
+    "trust_signal": "low",
+    "flags": [],
+    "explanation": "No strong heuristic risk markers were detected in this reference example."
+  },
+  "note": "Neutral civic example showing a routine public-interest logistics update."
+}

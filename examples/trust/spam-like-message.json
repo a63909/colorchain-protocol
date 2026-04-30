@@ -1,0 +1,13 @@
+{
+  "message_type": "public-interest-update",
+  "content": "SHARE IMMEDIATELY!!! SHARE IMMEDIATELY!!! Water alert water alert water alert!!!",
+  "example_trust_metadata": {
+    "spam_score": 0.15,
+    "duplication_risk": 0.38,
+    "manipulation_risk": 0.63,
+    "trust_signal": "medium",
+    "flags": ["repeated-phrase", "uppercase-emphasis", "excessive-exclamation", "suspicious-call-to-action", "duplicated-content-marker"],
+    "explanation": "The reference scorer assigned a medium signal because it detected repeated-phrase, uppercase-emphasis, excessive-exclamation, suspicious-call-to-action, and duplicated-content-marker."
+  },
+  "note": "Neutral civic example showing a spam-like redistribution pattern around a water alert."
+}

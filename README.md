@@ -47,3 +47,23 @@ It does not censor content and does not decide what users are allowed to see. It
 ## Repository purpose
 
 This repository is intended to document the open protocol direction, roadmap, architecture, and grant-facing development plan for ColorChain.
+
+## Public documentation
+
+- [docs/roadmap.md](docs/roadmap.md)
+- [docs/architecture.md](docs/architecture.md)
+- [docs/demo.md](docs/demo.md)
+- [docs/demo-script.md](docs/demo-script.md)
+- [docs/test-results.md](docs/test-results.md)
+- [docs/screenshots.md](docs/screenshots.md)
+- [docs/open-source-scope.md](docs/open-source-scope.md)
+- [docs/ai-trust-layer.md](docs/ai-trust-layer.md)
+- [docs/grant-positioning.md](docs/grant-positioning.md)
+
+## Reference implementation
+
+A small standalone Java reference implementation is available under:
+
+[src/reference/java/](src/reference/java/)
+
+It demonstrates message representation, canonical hashing, and advisory trust metadata. It is not production consensus code.
