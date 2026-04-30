@@ -6,6 +6,8 @@ This document describes the minimum demo required for grant and investor applica
 
 Show that ColorChain is not just an idea, but a working prototype.
 
+The demo should prove that ColorChain can run as an independent mobile-first peer-to-peer network where nodes can connect, exchange information, create or receive blocks, and synchronize state without relying on a central platform or external blockchain ecosystem.
+
 The demo should show:
 
 - at least one mobile node;
