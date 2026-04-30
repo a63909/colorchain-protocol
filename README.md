@@ -48,8 +48,15 @@ It does not censor content and does not decide what users are allowed to see. It
 
 This repository is intended to document the open protocol direction, roadmap, architecture, and grant-facing development plan for ColorChain.
 
+## For grant reviewers
+
+For NLnet/NGI Zero Commons reviewers, the project-specific application summary is available here:
+
+[docs/nlnet-application.md](docs/nlnet-application.md)
+
 ## Public documentation
 
+- [docs/nlnet-application.md](docs/nlnet-application.md)
 - [docs/roadmap.md](docs/roadmap.md)
 - [docs/architecture.md](docs/architecture.md)
 - [docs/demo.md](docs/demo.md)
