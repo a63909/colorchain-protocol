@@ -54,9 +54,13 @@ For NLnet/NGI Zero Commons reviewers, the project-specific application summary i
 
 [docs/nlnet-application.md](docs/nlnet-application.md)
 
+A sanitized propagation proof is available here:
+[docs/evidence-std-to-physical-gen.md](docs/evidence-std-to-physical-gen.md)
+
 ## Public documentation
 
 - [docs/nlnet-application.md](docs/nlnet-application.md)
+- [docs/evidence-std-to-physical-gen.md](docs/evidence-std-to-physical-gen.md)
 - [docs/roadmap.md](docs/roadmap.md)
 - [docs/architecture.md](docs/architecture.md)
 - [docs/demo.md](docs/demo.md)
