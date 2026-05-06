@@ -10,7 +10,7 @@ This includes, without limitation:
 
 - ColorChain
 - LBU₽
-- Local Blockchain Utility Protocol
+- Local Blockchain Ultimatum Protocol
 - Krivye Linii
 - Кривые Линии
 - related logos, marks, and project branding
