@@ -78,3 +78,9 @@ A small standalone Java reference implementation is available under:
 [src/reference/java/](src/reference/java/)
 
 It demonstrates message representation, canonical hashing, and advisory trust metadata. It is not production consensus code.
+
+## License and trademarks
+
+This repository is released under the MIT License.
+
+Project names, marks, and branding are not licensed as trademarks under the MIT License. See [TRADEMARKS.md](TRADEMARKS.md).
