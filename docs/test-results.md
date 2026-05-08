@@ -38,7 +38,15 @@ The next public demo should capture:
 | block synchronization | internal prototype | Public logs and screenshots are pending. |
 | reconnect/recovery | pending public measurement | Planned for structured demo and grant-period testing. |
 | AI trust metadata mock | internal prototype | Public examples are included; formal measurement is pending. |
+| Wallet restore validation | internal prototype | Passed in controlled local test; no private seed data is public. |
+| Transaction flow validation | internal prototype | Passed in internal prototype test; public audited wallet infrastructure is not claimed. |
 | public demo recording | planned | To be produced as part of the public evidence package. |
+
+## Recent internal validation
+
+- Wallet restore validation: passed in controlled local test.
+- Transaction flow validation: passed in internal prototype test.
+- Limitations: not audited, not production wallet release, no private seed data public.
 
 ## What will be measured during the grant
 

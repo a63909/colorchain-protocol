@@ -22,6 +22,12 @@ ColorChain is currently an early working prototype with:
 - local synchronization;
 - early block production logic.
 
+Recent internal prototype milestones:
+
+- live same-hash P2P block propagation between Android emulator and physical Samsung phone;
+- repaired and validated Android transaction flow;
+- repaired and validated seed phrase restore / wallet recovery path.
+
 ## Goal
 
 The goal is to build independent open infrastructure for censorship-resistant, verifiable, and resilient public-interest information sharing.
@@ -60,7 +66,11 @@ A sanitized propagation proof is available here:
 ## Public documentation
 
 - [docs/nlnet-application.md](docs/nlnet-application.md)
+- [docs/alliance-product-update.md](docs/alliance-product-update.md)
 - [docs/evidence-std-to-physical-gen.md](docs/evidence-std-to-physical-gen.md)
+- [docs/evidence-wallet-restore.md](docs/evidence-wallet-restore.md)
+- [docs/evidence-transaction-flow.md](docs/evidence-transaction-flow.md)
+- [docs/wallet-and-transactions.md](docs/wallet-and-transactions.md)
 - [docs/roadmap.md](docs/roadmap.md)
 - [docs/architecture.md](docs/architecture.md)
 - [docs/demo.md](docs/demo.md)

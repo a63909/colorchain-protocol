@@ -28,6 +28,14 @@ The demo should show:
 6. Show block hash, height, synchronization log, or UI evidence.
 7. Show mock or real AI trust metadata.
 
+## Optional future demo: wallet restore and transaction flow
+
+A future demo may show the repaired wallet restore path and transaction flow in the Android prototype.
+
+This demo must use a test wallet only. Seed phrases, private keys, personal wallet material, and sensitive addresses must be redacted or replaced with sanitized test data.
+
+The goal is to show the restore path and transaction flow in controlled prototype testing, not to make production security claims.
+
 Example trust metadata:
 
 ```json
