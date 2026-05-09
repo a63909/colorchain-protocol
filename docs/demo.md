@@ -36,6 +36,24 @@ This demo must use a test wallet only. Seed phrases, private keys, personal wall
 
 The goal is to show the restore path and transaction flow in controlled prototype testing, not to make production security claims.
 
+## Optional future demo: Messenger MVP
+
+A future demo may show the Messenger MVP foundation on top of ColorChain Core.
+
+The demo should use test-only messages and should not expose private user messages, personal identifiers, device IDs, IP addresses, seed phrases, private keys, or raw wallet data.
+
+The demo may show:
+
+- signed message envelope creation;
+- GEN to STD delivery;
+- STD to GEN reverse delivery;
+- DeliveryAck;
+- local persistence after restart;
+- redacted JVM/desktop archival metadata;
+- non-minting MessageProofClaim.
+
+The demo must not claim production-grade secure messaging, end-to-end encryption, or live LBU₽ rewards for messaging.
+
 Example trust metadata:
 
 ```json

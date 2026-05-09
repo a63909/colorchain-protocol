@@ -59,6 +59,14 @@ The AI layer does not censor content and does not decide what users are allowed 
 
 Its purpose is to provide transparent metadata that helps users evaluate information more safely.
 
+## 5. Application messaging layer
+
+ColorChain is beginning to support application-layer messaging above the Core v1 P2P/block foundation.
+
+The current internal prototype includes signed message envelopes, delivery acknowledgements, local message persistence, redacted JVM archival metadata, and a non-minting MessageProofClaim pool.
+
+This layer is early prototype work. It does not yet claim production-grade end-to-end encryption or live LBU₽ rewards for messaging.
+
 ## Design principles
 
 ColorChain is designed around these principles:

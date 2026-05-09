@@ -41,12 +41,36 @@ The next public demo should capture:
 | Wallet restore validation | internal prototype | Passed in controlled local test; no private seed data is public. |
 | Transaction flow validation | internal prototype | Passed in internal prototype test; public audited wallet infrastructure is not claimed. |
 | public demo recording | planned | To be produced as part of the public evidence package. |
+| Messenger MVP foundation | internal prototype | Application-layer messaging foundation is implemented in the internal Android/JVM prototype. |
+| GEN to STD message delivery | internal prototype validated | Validated in controlled internal testing. |
+| STD to GEN message delivery | internal prototype validated | Validated in controlled internal testing. |
+| Delivery ACK flow | internal prototype validated | Delivery acknowledgement flow is present in the internal prototype. |
+| Multi-message storage | fixed | Multi-message storage issue was repaired in the internal prototype. |
+| Restart persistence | internal prototype validated | Message-related local persistence was validated after restart. |
+| JVM redacted archive | internal prototype validated | JVM/desktop archival metadata is redacted. |
+| Plaintext not stored in PC/JVM archive/logs | validated in controlled test | Public evidence must still avoid private messages and raw payloads. |
+| LBU₽ messaging rewards | not enabled | MessageProofClaim is currently non-minting. |
 
 ## Recent internal validation
 
 - Wallet restore validation: passed in controlled local test.
 - Transaction flow validation: passed in internal prototype test.
 - Limitations: not audited, not production wallet release, no private seed data public.
+
+## Messenger MVP validation
+
+Internal Android/JVM prototype validation currently indicates:
+
+- MESSENGER_MVP_FOUNDATION_OK
+- MESSENGER_BIDIRECTIONAL_DELIVERY_OK
+- MESSENGER_ACK_FLOW_OK
+- MESSENGER_MULTI_MESSAGE_STORAGE_OK
+- MESSENGER_RESTART_PERSISTENCE_OK
+- JVM_REDACTED_ARCHIVE_OK
+- MESSENGER_NO_PLAINTEXT_PC_ARCHIVE_OK
+- MESSENGER_NO_MINTING_YET
+
+This remains internal prototype validation and does not claim production messaging readiness.
 
 ## What will be measured during the grant
 

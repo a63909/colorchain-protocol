@@ -32,6 +32,18 @@
 - Measure synchronization reliability.
 - Document propagation behavior.
 
+## Milestone: Messenger MVP and communication-backed participation proofs
+
+- Stabilize signed message envelope handling.
+- Stabilize delivery acknowledgements.
+- Maintain local message, ACK, and claim persistence.
+- Preserve redacted JVM/desktop archival metadata.
+- Validate restart persistence.
+- Harden MessageProofClaim validation.
+- Design end-to-end encryption.
+- Design anti-spam and anti-abuse rules.
+- Explore capped communication-backed LBU₽ participation rewards after technical and legal validation.
+
 ## Milestone 5: Open release
 
 - Publish protocol documentation.

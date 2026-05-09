@@ -26,7 +26,8 @@ Recent internal prototype milestones:
 
 - live same-hash P2P block propagation between Android emulator and physical Samsung phone;
 - repaired and validated Android transaction flow;
-- repaired and validated seed phrase restore / wallet recovery path.
+- repaired and validated seed phrase restore / wallet recovery path;
+- initial Messenger MVP foundation with signed message envelopes, delivery acknowledgements, local persistence, redacted JVM archival metadata, and non-minting MessageProofClaim prototype.
 
 ## Goal
 
@@ -71,6 +72,7 @@ A sanitized propagation proof is available here:
 - [docs/evidence-wallet-restore.md](docs/evidence-wallet-restore.md)
 - [docs/evidence-transaction-flow.md](docs/evidence-transaction-flow.md)
 - [docs/wallet-and-transactions.md](docs/wallet-and-transactions.md)
+- [docs/messenger-mvp.md](docs/messenger-mvp.md)
 - [docs/roadmap.md](docs/roadmap.md)
 - [docs/architecture.md](docs/architecture.md)
 - [docs/demo.md](docs/demo.md)
