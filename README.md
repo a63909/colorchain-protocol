@@ -131,6 +131,8 @@ The reference implementation now includes a reproducible local two-node demo tha
 
 The reference implementation also includes a reproducible Messenger two-node demo that demonstrates a minimal MessageEnvelope -> DeliveryAck -> non-minting MessageProofClaim flow without Android, private messages, or external dependencies.
 
+Both reproducible demos include negative/tamper checks so reviewers can inspect rejection behavior rather than only a happy-path PASS.
+
 ## License and trademarks
 
 This repository is released under the MIT License.

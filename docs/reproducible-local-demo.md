@@ -12,6 +12,8 @@ This demo provides a minimal reproducible Java reference artifact for reviewers.
 - simulated send from Node A to Node B;
 - hash verification on Node B;
 - same-hash accept on Node B;
+- tampered payload rejection;
+- mismatched previous-hash rejection;
 - PASS/FAIL console result.
 
 ## What it does not demonstrate
@@ -24,6 +26,10 @@ This demo provides a minimal reproducible Java reference artifact for reviewers.
 - LBU₽ rewards;
 - production security;
 - end-to-end encryption.
+
+## Negative checks
+
+The demo includes negative checks so that it does not only demonstrate the happy path. It verifies that a tampered canonical payload is rejected and that a record with a mismatched previous hash is rejected.
 
 ## Run instructions
 
@@ -55,6 +61,8 @@ NODE_A_LOCAL_ACCEPT hash=4c606739eb2fd6f1cc61b9b7416d7dda62ae47355f165049b96b0b4
 NODE_A_SEND hash=4c606739eb2fd6f1cc61b9b7416d7dda62ae47355f165049b96b0b45efcd64ec
 NODE_B_RECEIVE hash=4c606739eb2fd6f1cc61b9b7416d7dda62ae47355f165049b96b0b45efcd64ec
 NODE_B_VERIFY sameHash=true prevMatches=true
+NODE_B_TAMPER_CHECK sameHash=false rejected=true
+NODE_B_WRONG_PREV_CHECK prevMatches=false rejected=true
 NODE_B_ACCEPT hash=4c606739eb2fd6f1cc61b9b7416d7dda62ae47355f165049b96b0b45efcd64ec height=1
 RESULT=PASS
 ```

@@ -57,7 +57,10 @@ The next public demo should capture:
 
 - Same-hash block propagation: passed between Android emulator and physical Samsung phone.
 - REFERENCE_TWO_NODE_DEMO_PASS
+- REFERENCE_TWO_NODE_TAMPER_CHECK_PASS
 - REFERENCE_MESSENGER_TWO_NODE_DEMO_PASS
+- REFERENCE_MESSENGER_TAMPER_CHECK_PASS
+- REFERENCE_MESSENGER_NON_MINTING_CHECK_PASS
 - Wallet restore validation: passed in controlled local test.
 - Transaction flow validation: passed in internal prototype test.
 - Messenger MVP foundation: internal prototype validation.
@@ -71,9 +74,7 @@ The next public demo should capture:
 
 These are internal prototype validations and should not be interpreted as public production readiness, security audit, or deployment guarantee.
 
-The public reference demo is intentionally minimal and does not claim production networking, consensus, wallet, transaction, or security behavior.
-
-The public Messenger reference demo is intentionally minimal and does not claim production networking, production messenger security, end-to-end encryption, LBU₽ rewards, wallet, transaction, or privacy behavior.
+The public reference demos are intentionally minimal and do not claim production networking, production messenger security, end-to-end encryption, LBU₽ rewards, wallet, transaction, or privacy behavior.
 
 ## Messenger MVP validation
 

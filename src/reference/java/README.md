@@ -22,6 +22,8 @@ java -cp src/reference/java org.colorchain.protocol.ReferenceDemo
 
 `ReferenceTwoNodeDemo` demonstrates a minimal same-hash propagation flow between two local reference nodes.
 
+It includes tampered payload and wrong previous-hash rejection checks.
+
 Compile:
 
 ```bash
@@ -42,6 +44,8 @@ For Windows PowerShell, refer to:
 ## Messenger two-node local demo
 
 `ReferenceMessengerTwoNodeDemo` demonstrates a minimal Messenger MVP flow between two local reference nodes: MessageEnvelope -> DeliveryAck -> non-minting MessageProofClaim.
+
+It includes tampered envelope, wrong ACK, and non-minting/non-spendable proof-claim checks.
 
 Compile:
 

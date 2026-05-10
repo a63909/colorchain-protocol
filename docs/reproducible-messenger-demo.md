@@ -13,6 +13,7 @@ This demo provides a minimal reproducible Java reference artifact for reviewers.
 - DeliveryAck flow;
 - delivered-state confirmation;
 - non-minting MessageProofClaim creation;
+- negative/tamper checks;
 - PASS/FAIL console result.
 
 ## What it does not demonstrate
@@ -59,7 +60,10 @@ NODE_A_SEND type=MSG_ENVELOPE messageHash=13cd4d16ec0e6d19c3dba43bff88e86002660d
 NODE_B_RECEIVE type=MSG_ENVELOPE messageHash=13cd4d16ec0e6d19c3dba43bff88e86002660d49b214662dabac30b4b1f255bf sameHash=true signatureValid=true stored=true
 NODE_B_SEND type=MSG_ACK messageHash=13cd4d16ec0e6d19c3dba43bff88e86002660d49b214662dabac30b4b1f255bf ackHash=1a2d6196913cb26a8aba674ef3995916d19dcc722796bb0067238b5b8ce852cd
 NODE_A_RECEIVE type=MSG_ACK messageHash=13cd4d16ec0e6d19c3dba43bff88e86002660d49b214662dabac30b4b1f255bf ackMatches=true delivered=true
-NODE_A_CREATE_PROOF_CLAIM messageHash=13cd4d16ec0e6d19c3dba43bff88e86002660d49b214662dabac30b4b1f255bf claimHash=2fe5061ce57f7780dbedc9195fd67e9da5506a3433b05a205362fb374a908c00 minting=false
+NODE_A_CREATE_PROOF_CLAIM messageHash=13cd4d16ec0e6d19c3dba43bff88e86002660d49b214662dabac30b4b1f255bf claimHash=0e8fe18a749aec12a72f45ad0f7642a4af9f97eefb05e3f80c5c7184ecf2805b minting=false spendable=false
+NODE_B_TAMPERED_ENVELOPE_CHECK sameHash=false signatureValid=false rejected=true
+NODE_A_WRONG_ACK_CHECK ackMatches=false rejected=true
+NODE_A_PROOF_CLAIM_MINTING_CHECK minting=false spendable=false
 RESULT=PASS
 ```
 

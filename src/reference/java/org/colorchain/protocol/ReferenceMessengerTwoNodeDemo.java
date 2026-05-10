@@ -77,7 +77,48 @@ public final class ReferenceMessengerTwoNodeDemo {
         System.out.println("NODE_A_CREATE_PROOF_CLAIM messageHash="
                 + claim.getMessageHash()
                 + " claimHash=" + claim.getClaimHash()
-                + " minting=" + claim.isMintingEnabled());
+                + " minting=" + claim.isMintingEnabled()
+                + " spendable=" + claim.isSpendable());
+
+        MessageEnvelope tamperedEnvelope = envelope.withTamperedContent(
+                "Tampered reference messenger payload.");
+        EnvelopeReceiveResult tamperedResult = nodeB.receiveEnvelope(tamperedEnvelope);
+        boolean tamperedRejected = !tamperedResult.isAccepted();
+        System.out.println("NODE_B_TAMPERED_ENVELOPE_CHECK sameHash="
+                + tamperedResult.isSameHash()
+                + " signatureValid=" + tamperedResult.isSignatureValid()
+                + " rejected=" + tamperedRejected);
+
+        if (!tamperedRejected || tamperedResult.isSameHash() || tamperedResult.isSignatureValid()) {
+            System.out.println("RESULT=FAIL");
+            throw new IllegalStateException("Reference messenger tampered-envelope check failed");
+        }
+
+        DeliveryAck wrongAck = DeliveryAck.create(
+                "ack-wrong-001",
+                nodeB.getNodeName(),
+                nodeA.getNodeName(),
+                FIXED_TIMESTAMP_MILLIS + 2L,
+                CanonicalMessageHash.sha256Hex("COLORCHAIN_REFERENCE_UNKNOWN_MESSAGE"));
+        AckReceiveResult wrongAckResult = nodeA.receiveAck(wrongAck);
+        boolean wrongAckRejected = !wrongAckResult.isDelivered();
+        System.out.println("NODE_A_WRONG_ACK_CHECK ackMatches="
+                + wrongAckResult.isAckMatches()
+                + " rejected=" + wrongAckRejected);
+
+        if (!wrongAckRejected || wrongAckResult.isAckMatches()) {
+            System.out.println("RESULT=FAIL");
+            throw new IllegalStateException("Reference messenger wrong-ACK check failed");
+        }
+
+        System.out.println("NODE_A_PROOF_CLAIM_MINTING_CHECK minting="
+                + claim.isMintingEnabled()
+                + " spendable=" + claim.isSpendable());
+
+        if (claim.isMintingEnabled() || claim.isSpendable()) {
+            System.out.println("RESULT=FAIL");
+            throw new IllegalStateException("Reference messenger non-minting proof-claim check failed");
+        }
         System.out.println("RESULT=PASS");
     }
 
@@ -197,7 +238,7 @@ public final class ReferenceMessengerTwoNodeDemo {
             if (!localAckStore.containsKey(ackHash)) {
                 throw new IllegalStateException(nodeName + " cannot claim proof for an unknown ACK");
             }
-            MessageProofClaim claim = MessageProofClaim.create(claimId, messageHash, ackHash, false);
+            MessageProofClaim claim = MessageProofClaim.create(claimId, messageHash, ackHash, false, false);
             proofClaimStore.put(claim.getClaimHash(), claim);
             return claim;
         }
@@ -279,6 +320,18 @@ public final class ReferenceMessengerTwoNodeDemo {
                     timestampMillis,
                     content,
                     contentHash);
+        }
+
+        private MessageEnvelope withTamperedContent(String tamperedContent) {
+            return new MessageEnvelope(
+                    envelopeId,
+                    fromNode,
+                    toNode,
+                    timestampMillis,
+                    tamperedContent,
+                    contentHash,
+                    messageHash,
+                    demoSignature);
         }
 
         private static String canonicalEnvelopePayload(
@@ -373,6 +426,7 @@ public final class ReferenceMessengerTwoNodeDemo {
         private final String messageHash;
         private final String ackHash;
         private final boolean mintingEnabled;
+        private final boolean spendable;
         private final String claimHash;
 
         private MessageProofClaim(
@@ -380,11 +434,13 @@ public final class ReferenceMessengerTwoNodeDemo {
                 String messageHash,
                 String ackHash,
                 boolean mintingEnabled,
+                boolean spendable,
                 String claimHash) {
             this.claimId = Objects.requireNonNull(claimId, "claimId");
             this.messageHash = Objects.requireNonNull(messageHash, "messageHash");
             this.ackHash = Objects.requireNonNull(ackHash, "ackHash");
             this.mintingEnabled = mintingEnabled;
+            this.spendable = spendable;
             this.claimHash = Objects.requireNonNull(claimHash, "claimHash");
         }
 
@@ -392,10 +448,16 @@ public final class ReferenceMessengerTwoNodeDemo {
                 String claimId,
                 String messageHash,
                 String ackHash,
-                boolean mintingEnabled) {
-            String canonicalPayload = canonicalClaimPayload(claimId, messageHash, ackHash, mintingEnabled);
+                boolean mintingEnabled,
+                boolean spendable) {
+            String canonicalPayload = canonicalClaimPayload(
+                    claimId,
+                    messageHash,
+                    ackHash,
+                    mintingEnabled,
+                    spendable);
             String claimHash = CanonicalMessageHash.sha256Hex(canonicalPayload);
-            return new MessageProofClaim(claimId, messageHash, ackHash, mintingEnabled, claimHash);
+            return new MessageProofClaim(claimId, messageHash, ackHash, mintingEnabled, spendable, claimHash);
         }
 
         private String getMessageHash() {
@@ -410,16 +472,22 @@ public final class ReferenceMessengerTwoNodeDemo {
             return mintingEnabled;
         }
 
+        private boolean isSpendable() {
+            return spendable;
+        }
+
         private static String canonicalClaimPayload(
                 String claimId,
                 String messageHash,
                 String ackHash,
-                boolean mintingEnabled) {
+                boolean mintingEnabled,
+                boolean spendable) {
             return "type=MSG_PROOF_CLAIM"
                     + "\nclaimId=" + escape(claimId)
                     + "\nmessageHash=" + escape(messageHash)
                     + "\nackHash=" + escape(ackHash)
-                    + "\nmintingEnabled=" + mintingEnabled;
+                    + "\nmintingEnabled=" + mintingEnabled
+                    + "\nspendable=" + spendable;
         }
     }
 

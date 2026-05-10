@@ -40,6 +40,34 @@ public final class ReferenceTwoNodeDemo {
             throw new IllegalStateException("Reference two-node verification failed");
         }
 
+        String tamperedPayload = canonicalPayload + "|tampered";
+        String tamperedHash = CanonicalMessageHash.sha256Hex(tamperedPayload);
+        boolean tamperedSameHash = recordHash.equals(tamperedHash);
+        boolean tamperedRejected = !tamperedSameHash;
+        System.out.println("NODE_B_TAMPER_CHECK sameHash="
+                + tamperedSameHash
+                + " rejected="
+                + tamperedRejected);
+
+        if (!tamperedRejected) {
+            System.out.println("RESULT=FAIL");
+            throw new IllegalStateException("Reference two-node tamper check failed");
+        }
+
+        ColorChainMessage wrongPreviousRecord = buildReferenceRecord(
+                CanonicalMessageHash.sha256Hex("COLORCHAIN_REFERENCE_WRONG_PREVIOUS_HASH"));
+        boolean wrongPreviousMatches = wrongPreviousRecord.getPreviousBlockHash().equals(nodeB.getHeadHash());
+        boolean wrongPreviousRejected = !wrongPreviousMatches;
+        System.out.println("NODE_B_WRONG_PREV_CHECK prevMatches="
+                + wrongPreviousMatches
+                + " rejected="
+                + wrongPreviousRejected);
+
+        if (!wrongPreviousRejected) {
+            System.out.println("RESULT=FAIL");
+            throw new IllegalStateException("Reference two-node previous-hash check failed");
+        }
+
         nodeB.accept(receivedHash);
         System.out.println("NODE_B_ACCEPT hash=" + receivedHash + " height=" + nodeB.getHeight());
         System.out.println("RESULT=PASS");

@@ -73,6 +73,8 @@ A standalone Java reference demo is available:
 
 It demonstrates a minimal local MessageEnvelope -> DeliveryAck -> non-minting MessageProofClaim flow between two reference nodes.
 
+It also includes negative checks for a tampered envelope, a wrong ACK, and non-minting/non-spendable proof-claim behavior.
+
 This reference demo is intentionally smaller than the internal Android/JVM prototype and does not claim production secure messaging, end-to-end encryption, real network transport, or LBU₽ rewards.
 
 ## Future work
