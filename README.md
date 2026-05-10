@@ -91,10 +91,14 @@ A sanitized propagation proof is available here:
 Live demo video:
 https://youtu.be/ejcNmULAKG8
 
+Reproducible local Java demo:
+[docs/reproducible-local-demo.md](docs/reproducible-local-demo.md)
+
 ## Public documentation
 
 - [docs/nlnet-application.md](docs/nlnet-application.md)
 - [docs/alliance-product-update.md](docs/alliance-product-update.md)
+- [docs/reproducible-local-demo.md](docs/reproducible-local-demo.md)
 - [docs/evidence-std-to-physical-gen.md](docs/evidence-std-to-physical-gen.md)
 - [docs/evidence-wallet-restore.md](docs/evidence-wallet-restore.md)
 - [docs/evidence-transaction-flow.md](docs/evidence-transaction-flow.md)
@@ -118,6 +122,8 @@ A small standalone Java reference implementation is available under:
 [src/reference/java/](src/reference/java/)
 
 It demonstrates message representation, canonical hashing, and advisory trust metadata. It is not production consensus code.
+
+The reference implementation now includes a reproducible local two-node demo that can be compiled and run without Android, private data, or external dependencies.
 
 ## License and trademarks
 

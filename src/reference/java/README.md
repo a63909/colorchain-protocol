@@ -17,3 +17,24 @@ Run:
 ```bash
 java -cp src/reference/java org.colorchain.protocol.ReferenceDemo
 ```
+
+## Two-node local demo
+
+`ReferenceTwoNodeDemo` demonstrates a minimal same-hash propagation flow between two local reference nodes.
+
+Compile:
+
+```bash
+mkdir -p /tmp/colorchain-reference-build
+javac -d /tmp/colorchain-reference-build src/reference/java/org/colorchain/protocol/*.java
+```
+
+Run:
+
+```bash
+java -cp /tmp/colorchain-reference-build org.colorchain.protocol.ReferenceTwoNodeDemo
+```
+
+For Windows PowerShell, refer to:
+
+[docs/reproducible-local-demo.md](../../../docs/reproducible-local-demo.md)

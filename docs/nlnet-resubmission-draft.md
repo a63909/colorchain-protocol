@@ -25,6 +25,7 @@ Core work areas:
 - reproducible local and multi-node demo scenarios;
 - advisory trust metadata that remains outside consensus;
 - public evidence reports with sanitized logs and screenshots.
+- reproducible standalone Java two-node reference demo that reviewers can compile and run locally.
 
 Messenger MVP, wallet recovery, and transaction flow should be described as internal prototype milestones that show the protocol can support application layers. They should not be presented as audited production products.
 

@@ -41,6 +41,7 @@ The next public demo should capture:
 | Wallet restore validation | internal prototype | Passed in controlled local test; no private seed data is public. |
 | Transaction flow validation | internal prototype | Passed in internal prototype test; public audited wallet infrastructure is not claimed. |
 | public demo recording | planned | To be produced as part of the public evidence package. |
+| Reproducible local two-node Java demo | public reproducible artifact | Demonstrates same-hash accept semantics between two local reference nodes. |
 | Messenger MVP foundation | internal prototype | Application-layer messaging foundation is implemented in the internal Android/JVM prototype. |
 | GEN to STD message delivery | internal prototype validated | Validated in controlled internal testing. |
 | STD to GEN message delivery | internal prototype validated | Validated in controlled internal testing. |
@@ -54,6 +55,7 @@ The next public demo should capture:
 ## Internal prototype validation
 
 - Same-hash block propagation: passed between Android emulator and physical Samsung phone.
+- REFERENCE_TWO_NODE_DEMO_PASS
 - Wallet restore validation: passed in controlled local test.
 - Transaction flow validation: passed in internal prototype test.
 - Messenger MVP foundation: internal prototype validation.
@@ -66,6 +68,8 @@ The next public demo should capture:
 - Limitations: not audited, not production wallet release, no private seed data public.
 
 These are internal prototype validations and should not be interpreted as public production readiness, security audit, or deployment guarantee.
+
+The public reference demo is intentionally minimal and does not claim production networking, consensus, wallet, transaction, or security behavior.
 
 ## Messenger MVP validation
 
