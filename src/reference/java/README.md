@@ -38,3 +38,24 @@ java -cp /tmp/colorchain-reference-build org.colorchain.protocol.ReferenceTwoNod
 For Windows PowerShell, refer to:
 
 [docs/reproducible-local-demo.md](../../../docs/reproducible-local-demo.md)
+
+## Messenger two-node local demo
+
+`ReferenceMessengerTwoNodeDemo` demonstrates a minimal Messenger MVP flow between two local reference nodes: MessageEnvelope -> DeliveryAck -> non-minting MessageProofClaim.
+
+Compile:
+
+```bash
+mkdir -p /tmp/colorchain-reference-build
+javac -d /tmp/colorchain-reference-build src/reference/java/org/colorchain/protocol/*.java
+```
+
+Run:
+
+```bash
+java -cp /tmp/colorchain-reference-build org.colorchain.protocol.ReferenceMessengerTwoNodeDemo
+```
+
+For Windows PowerShell, refer to:
+
+[docs/reproducible-messenger-demo.md](../../../docs/reproducible-messenger-demo.md)

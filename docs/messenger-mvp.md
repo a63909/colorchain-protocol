@@ -65,6 +65,16 @@ Plaintext message content should not be written into public archives, PC/JVM log
 
 Public demos and evidence packages must avoid private messages, personal identifiers, device identifiers, IP addresses, seed phrases, private keys, and raw wallet material.
 
+## Reproducible reference demo
+
+A standalone Java reference demo is available:
+
+[docs/reproducible-messenger-demo.md](reproducible-messenger-demo.md)
+
+It demonstrates a minimal local MessageEnvelope -> DeliveryAck -> non-minting MessageProofClaim flow between two reference nodes.
+
+This reference demo is intentionally smaller than the internal Android/JVM prototype and does not claim production secure messaging, end-to-end encryption, real network transport, or LBU₽ rewards.
+
 ## Future work
 
 Future milestones include:
