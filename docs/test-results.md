@@ -51,11 +51,21 @@ The next public demo should capture:
 | Plaintext not stored in PC/JVM archive/logs | validated in controlled test | Public evidence must still avoid private messages and raw payloads. |
 | LBU₽ messaging rewards | not enabled | MessageProofClaim is currently non-minting. |
 
-## Recent internal validation
+## Internal prototype validation
 
+- Same-hash block propagation: passed between Android emulator and physical Samsung phone.
 - Wallet restore validation: passed in controlled local test.
 - Transaction flow validation: passed in internal prototype test.
+- Messenger MVP foundation: internal prototype validation.
+- Bidirectional message delivery: internal prototype validation.
+- ACK flow: internal prototype validation.
+- Restart persistence: internal prototype validation.
+- Redacted JVM archive: internal prototype validation.
+- No plaintext in PC/JVM archive/logs: validated in controlled test.
+- LBU₽ messaging rewards: not enabled.
 - Limitations: not audited, not production wallet release, no private seed data public.
+
+These are internal prototype validations and should not be interpreted as public production readiness, security audit, or deployment guarantee.
 
 ## Messenger MVP validation
 

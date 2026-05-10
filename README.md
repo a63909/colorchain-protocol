@@ -1,15 +1,26 @@
 # ColorChain
 
-ColorChain is an independent, protocol-agnostic, mobile-first peer-to-peer network for resilient public-interest information sharing.
+ColorChain is an independent mobile-first peer-to-peer protocol stack for resilient decentralized communication and state synchronization across unstable or restricted networks.
 
-It enables mobile and desktop nodes to publish, synchronize, and preserve information without relying on a central server, centralized platform, or external blockchain ecosystem.
+It separates protocol infrastructure from applications built on top of it. Android and JVM/desktop nodes are prototype implementations used to validate the core protocol direction.
+
+ColorChain does not depend on a central server, centralized platform, or external blockchain ecosystem.
 
 The project combines:
 
-- peer-to-peer message propagation;
-- block-based persistence;
+- peer-to-peer transport and message propagation;
+- block-based state synchronization;
 - mobile-first node architecture;
-- transparent AI-assisted trust signals for spam, duplication, manipulation patterns, and suspicious information flows.
+- application-layer messaging experiments;
+- transparent advisory trust metadata for spam, duplication, anomaly, and manipulation-risk signals.
+
+## Protocol, not just an app
+
+ColorChain Core is the protocol layer.
+
+Android/JVM nodes, wallet functionality, transaction flow, Messenger MVP, and trust-signal experiments are prototype implementations and application layers around the core protocol.
+
+The public documentation should therefore be read as protocol infrastructure work first, not as a token-first product or a single mobile application.
 
 ## Current status
 
@@ -21,6 +32,19 @@ ColorChain is currently an early working prototype with:
 - block creation and validation;
 - local synchronization;
 - early block production logic.
+
+## Current working components
+
+- Android node prototype;
+- JVM/desktop node direction;
+- peer-to-peer communication;
+- block creation and validation;
+- local synchronization;
+- same-hash block propagation between Android emulator and physical Samsung phone;
+- seed phrase restore / wallet recovery path;
+- transaction flow;
+- Messenger MVP foundation;
+- advisory AI trust metadata design.
 
 Recent internal prototype milestones:
 
@@ -73,6 +97,7 @@ A sanitized propagation proof is available here:
 - [docs/evidence-transaction-flow.md](docs/evidence-transaction-flow.md)
 - [docs/wallet-and-transactions.md](docs/wallet-and-transactions.md)
 - [docs/messenger-mvp.md](docs/messenger-mvp.md)
+- [docs/nlnet-resubmission-draft.md](docs/nlnet-resubmission-draft.md)
 - [docs/roadmap.md](docs/roadmap.md)
 - [docs/architecture.md](docs/architecture.md)
 - [docs/demo.md](docs/demo.md)

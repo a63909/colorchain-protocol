@@ -34,7 +34,7 @@ The goal is not to create a centralized truth authority. The goal is to give use
 
 For NLnet, ColorChain should be presented as:
 
-Independent open-source P2P infrastructure for resilient public-interest information sharing.
+Independent open protocol infrastructure for mobile-first peer-to-peer communication and state synchronization.
 
 Key themes:
 
@@ -43,10 +43,15 @@ Key themes:
 - user control;
 - data sovereignty;
 - mobile-first infrastructure;
+- mobile-first P2P communication and synchronization stack;
+- public-interest resilient communication infrastructure;
+- vendor-neutral and protocol-agnostic design;
+- MIT/open documentation direction;
 - open protocol documentation;
 - transparent trust metadata;
 - public-interest technology;
-- free and open internet infrastructure.
+- free and open internet infrastructure;
+- not a token-first project.
 
 Suggested proposal title:
 
@@ -54,13 +59,23 @@ ColorChain: Independent mobile-first P2P protocol for resilient public-interest 
 
 Suggested abstract:
 
-ColorChain is an independent, protocol-agnostic, mobile-first peer-to-peer protocol for resilient public-interest information sharing.
+ColorChain is an independent, protocol-agnostic, mobile-first peer-to-peer protocol stack for resilient decentralized communication and state synchronization across unstable or restricted networks.
 
-The project enables mobile and desktop nodes to publish, synchronize, and preserve information without relying on a central server, centralized platform, or external blockchain ecosystem. ColorChain combines peer-to-peer message propagation, block-based persistence, mobile-first node architecture, and transparent AI-assisted trust metadata.
+The project enables mobile and desktop nodes to publish, synchronize, and preserve state without relying on a central server, centralized platform, or external blockchain ecosystem. ColorChain combines peer-to-peer transport, block-based records, mobile-first node architecture, application-layer prototype work, and transparent AI-assisted trust metadata.
 
 The proposed work will deliver an open-source protocol prototype, improved Android/JVM node synchronization, documentation of the message/block format, reproducible test scenarios, and an AI-assisted trust layer that helps identify spam, duplicated content, coordinated manipulation patterns, and suspicious information flows.
 
-The expected outcome is a working open-source prototype demonstrating independent serverless information propagation between multiple nodes, verifiable block-based records, and transparent trust signals. The project contributes to the Next Generation Internet vision by strengthening user control, decentralization, data sovereignty, and access to trustworthy public-interest information infrastructure.
+The expected outcome is a working open-source prototype demonstrating independent serverless propagation between multiple nodes, verifiable block-based records, and transparent trust signals. The project contributes to the Next Generation Internet vision by strengthening user control, decentralization, data sovereignty, and access to trustworthy public-interest communication infrastructure.
+
+Risk and ethics framing:
+
+- abuse and spam risks must be documented openly;
+- Sybil resistance remains a protocol and governance research challenge;
+- AI trust signals can produce false positives and false negatives;
+- users should retain local agency over interpretation of advisory signals;
+- the project should not create a centralized moderation authority;
+- the protocol should not include hidden backdoors;
+- the project should not be positioned for military, intelligence, targeting, or surveillance use.
 
 ## OTF positioning
 

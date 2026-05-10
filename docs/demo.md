@@ -28,6 +28,23 @@ The demo should show:
 6. Show block hash, height, synchronization log, or UI evidence.
 7. Show mock or real AI trust metadata.
 
+## Current public demo
+
+Current public demo:
+
+https://youtu.be/ejcNmULAKG8
+
+What the current demo proves:
+
+- node-to-node block propagation;
+- same-hash acceptance;
+- Android emulator node participation;
+- physical Samsung phone node participation.
+
+The current public demo is evidence of prototype behavior, not a production-readiness claim.
+
+Runnable command-level demo scripts are planned for future public release.
+
 ## Optional future demo: wallet restore and transaction flow
 
 A future demo may show the repaired wallet restore path and transaction flow in the Android prototype.
@@ -52,7 +69,7 @@ The demo may show:
 - redacted JVM/desktop archival metadata;
 - non-minting MessageProofClaim.
 
-The demo must not claim production-grade secure messaging, end-to-end encryption, or live LBU₽ rewards for messaging.
+The demo must not claim production messaging security, end-to-end encryption, or live LBU₽ rewards for messaging.
 
 Example trust metadata:
 

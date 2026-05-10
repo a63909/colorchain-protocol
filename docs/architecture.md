@@ -1,71 +1,99 @@
 # ColorChain Architecture
 
-ColorChain consists of four primary layers.
+ColorChain is designed as an independent mobile-first peer-to-peer protocol stack for resilient decentralized communication and state synchronization.
 
-## 1. Node layer
+The architecture separates the core protocol from application layers and experimental utility mechanisms. Android and JVM/desktop nodes are prototype implementations used to validate the protocol direction.
 
-Mobile and desktop nodes participate in the network.
+## Protocol stack
 
-Nodes can:
+### 1. Transport layer
 
-- create blocks;
-- receive blocks;
-- validate blocks;
-- synchronize with peers;
-- preserve local chain state;
-- exchange network status.
+The transport layer is responsible for node-to-node communication.
 
-The project is mobile-first, but desktop/JVM nodes are also part of the architecture for reliability, testing, and long-running network participation.
-
-## 2. P2P propagation layer
-
-Nodes exchange information directly without relying on a central server.
-
-The system is designed for:
+It is designed around:
 
 - peer-to-peer communication;
-- mobile-first operation;
+- peer connection and discovery direction;
+- connection recovery;
+- constrained mobile networks;
+- unstable or restricted network environments.
+
+HELLO / capability negotiation is treated as an internal prototype direction and should be documented publicly only as implementation evidence becomes reproducible.
+
+### 2. Canonical block/state layer
+
+The canonical block/state layer organizes records into verifiable state transitions.
+
+It includes:
+
+- block-based records;
+- canonical hashing;
+- block validation;
+- local synchronization;
+- wallet-state / UTXO handling in the internal Android prototype;
+- future deterministic replay and state-validation documentation where applicable.
+
+This layer is the main protocol infrastructure focus for public documentation and grant work.
+
+### 3. Mobile node layer
+
+ColorChain treats mobile devices as first-class network participants.
+
+The mobile node layer focuses on:
+
+- Android-first node participation;
 - intermittent connectivity;
-- local and wider-network synchronization;
-- multi-node testing across mobile and desktop devices.
+- battery and network constraints;
+- physical phones as first-class nodes;
+- mobile-to-desktop and mobile-to-mobile synchronization testing.
 
-The goal is to reduce dependency on centralized platforms and centralized infrastructure.
+Desktop/JVM nodes remain important for reliability testing, long-running participation, archival experiments, and reproducible public demos.
 
-## 3. Block-based persistence layer
+### 4. Application messaging layer
 
-Messages and metadata are organized into verifiable block-based records.
+ColorChain is beginning to support application-layer messaging above the Core v1 P2P/block foundation.
 
-This creates:
+The current internal prototype includes:
 
-- persistent information history;
-- verifiable records;
-- tamper-evident structure;
-- synchronization checkpoints;
-- a foundation for resilient public-interest information sharing.
+- Messenger MVP foundation;
+- signed MessageEnvelope;
+- DeliveryAck;
+- local message persistence;
+- redacted JVM/desktop archival metadata;
+- non-minting MessageProofClaim.
 
-## 4. AI-assisted trust layer
+This layer is early prototype work. It does not claim production-grade end-to-end encryption or live LBU₽ rewards for messaging.
 
-The AI trust layer generates advisory signals about content and network behavior.
+### 5. Advisory trust layer
+
+The advisory trust layer generates optional metadata about content and network behavior.
 
 Possible signals include:
 
 - spam probability;
 - duplication risk;
-- manipulation risk;
+- manipulation-risk patterns;
 - abnormal propagation patterns;
-- suspicious information flows.
+- suspicious metadata patterns.
 
-The AI layer does not censor content and does not decide what users are allowed to see.
+This layer is not consensus-critical and is not a centralized moderation authority. Network validity remains cryptographic/protocol-level; trust metadata is advisory and should be explainable to users.
 
-Its purpose is to provide transparent metadata that helps users evaluate information more safely.
+Where possible, trust-signal experiments should move toward local, client-side, or on-device heuristics rather than centralized decision-making.
 
-## 5. Application messaging layer
+### 6. Experimental utility/incentive layer
 
-ColorChain is beginning to support application-layer messaging above the Core v1 P2P/block foundation.
+LBU₽ is treated as an experimental native utility unit for prototype-stage network incentives.
 
-The current internal prototype includes signed message envelopes, delivery acknowledgements, local message persistence, redacted JVM archival metadata, and a non-minting MessageProofClaim pool.
+This layer may explore:
 
-This layer is early prototype work. It does not yet claim production-grade end-to-end encryption or live LBU₽ rewards for messaging.
+- node incentives;
+- block rewards;
+- capped participation incentives;
+- future communication-backed participation proofs after technical validation, abuse-resistance design, and legal review.
+
+This is not the center of the NLnet protocol positioning. ColorChain should not be presented as a token-first project, a public offering, a market-listing effort, or a financial-return product.
+
+Messaging rewards are not enabled.
 
 ## Design principles
 
@@ -74,6 +102,7 @@ ColorChain is designed around these principles:
 - independence;
 - decentralization;
 - mobile-first access;
+- protocol infrastructure before application hype;
 - transparent trust signals;
 - open documentation;
 - censorship resistance;

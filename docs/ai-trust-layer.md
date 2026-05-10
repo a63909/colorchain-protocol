@@ -4,6 +4,10 @@
 
 The AI layer provides advisory trust metadata for decentralized information flows.
 
+The AI layer is optional metadata around the protocol. It does not participate in consensus, block validity, or canonical state decisions.
+
+Where possible, trust-signal experiments should move toward local, on-device, or client-side heuristics so that users can inspect and control how advisory signals are produced.
+
 ## Non-goals
 
 - It does not determine truth.
@@ -11,6 +15,8 @@ The AI layer provides advisory trust metadata for decentralized information flow
 - It does not remove messages.
 - It does not replace human/community judgment.
 - It does not create a centralized moderation authority.
+- It does not participate in consensus.
+- It does not decide whether a cryptographic network message is valid.
 
 ## Example output
 
@@ -35,6 +41,8 @@ The AI layer provides advisory trust metadata for decentralized information flow
 - emotionally manipulative wording
 - suspicious metadata patterns
 
+Network decisions remain cryptographic/protocol-level. Trust metadata should be treated as advisory context, not as an enforcement layer.
+
 ## Safety limitations
 
 - false positives are possible
@@ -42,6 +50,7 @@ The AI layer provides advisory trust metadata for decentralized information flow
 - adversarial behavior is expected
 - scores should be explainable
 - users should be able to inspect why a signal was produced
+- AI-assisted metadata should not become a hidden centralized moderation mechanism
 
 ## Grant milestone
 
