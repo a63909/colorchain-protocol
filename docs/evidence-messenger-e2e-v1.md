@@ -4,7 +4,7 @@
 
 This document summarizes the current evidence for the experimental Messenger E2E encrypted-v1 path in the internal Android/JVM ColorChain prototype.
 
-The Messenger layer remains prototype-stage and unaudited. This document does not claim production-grade secure messaging, audited encryption, complete metadata privacy, or public launch readiness.
+The Messenger E2E encrypted-v1 path is an active MVP milestone validated in controlled internal tests. This document describes current evidence and does not claim production-grade secure messaging, audited encryption, complete metadata privacy, or public launch readiness.
 
 ## Current internal milestone
 
@@ -64,17 +64,9 @@ This evidence does not claim:
 
 ## Safety and publication policy
 
-Public evidence must not include:
+Public evidence must use test-only content and must not expose real private message bodies, secret wallet material, personal identifiers, operational endpoints, or raw logs containing sensitive runtime data.
 
-- real private message bodies;
-- seed phrases;
-- private keys;
-- wallet material;
-- IP addresses;
-- device identifiers;
-- raw logs containing operational endpoints or private data.
-
-Any future public demo should use test-only messages and should avoid exposing private content or operational identifiers.
+Any future public demo should avoid exposing private content or operational identifiers.
 
 ## Current status label
 
@@ -87,5 +79,5 @@ MESSENGER_E2E_ENCRYPTED_V1_INTERNAL_VALIDATION_OK
 Suggested cautious wording:
 
 ```text
-The internal Android/JVM Messenger MVP includes an experimental E2E encrypted-v1 path validated in controlled live/offline tests. It remains prototype-stage and unaudited, and should not be described as production-grade secure messaging.
+The internal Android/JVM Messenger MVP includes an experimental E2E encrypted-v1 path validated in controlled live/offline tests. It remains an internal MVP milestone under active hardening and should not be described as production-grade secure messaging.
 ```
