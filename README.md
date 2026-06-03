@@ -44,6 +44,7 @@ ColorChain is currently an early working prototype with:
 - seed phrase restore / wallet recovery path;
 - transaction flow;
 - Messenger MVP foundation;
+- experimental Messenger E2E encrypted-v1 path in the internal Android/JVM prototype;
 - advisory AI trust metadata design.
 
 Recent internal prototype milestones:
@@ -51,7 +52,8 @@ Recent internal prototype milestones:
 - live same-hash P2P block propagation between Android emulator and physical Samsung phone;
 - repaired and validated Android transaction flow;
 - repaired and validated seed phrase restore / wallet recovery path;
-- initial Messenger MVP foundation with signed message envelopes, delivery acknowledgements, local persistence, redacted JVM archival metadata, and non-minting MessageProofClaim prototype.
+- initial Messenger MVP foundation with signed message envelopes, delivery acknowledgements, local persistence, redacted JVM archival metadata, and non-minting MessageProofClaim prototype;
+- experimental Messenger E2E encrypted-v1 path validated in controlled live/offline internal tests; this remains prototype-stage and unaudited.
 
 ## Goal
 
@@ -97,6 +99,9 @@ Reproducible local Java demo:
 Reproducible Messenger Java demo:
 [docs/reproducible-messenger-demo.md](docs/reproducible-messenger-demo.md)
 
+Messenger E2E encrypted-v1 evidence note:
+[docs/evidence-messenger-e2e-v1.md](docs/evidence-messenger-e2e-v1.md)
+
 ## Public documentation
 
 - [docs/nlnet-application.md](docs/nlnet-application.md)
@@ -106,6 +111,7 @@ Reproducible Messenger Java demo:
 - [docs/evidence-std-to-physical-gen.md](docs/evidence-std-to-physical-gen.md)
 - [docs/evidence-wallet-restore.md](docs/evidence-wallet-restore.md)
 - [docs/evidence-transaction-flow.md](docs/evidence-transaction-flow.md)
+- [docs/evidence-messenger-e2e-v1.md](docs/evidence-messenger-e2e-v1.md)
 - [docs/wallet-and-transactions.md](docs/wallet-and-transactions.md)
 - [docs/messenger-mvp.md](docs/messenger-mvp.md)
 - [docs/nlnet-resubmission-draft.md](docs/nlnet-resubmission-draft.md)
