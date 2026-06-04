@@ -1,4 +1,4 @@
-# Test Results and Prototype Status
+﻿# Test Results and Prototype Status
 
 This is a pre-pilot technical status report.
 
@@ -53,7 +53,11 @@ The next public demo should capture:
 | Restart persistence | internal prototype validated | Message-related local persistence was validated after restart. |
 | JVM redacted/encrypted archive | internal prototype validated | JVM/desktop archival metadata is redacted and checked with plaintextArchived=false in controlled tests. |
 | Plaintext not stored in PC/JVM archive/logs | validated in controlled test | Public evidence must still avoid private messages and raw payloads. |
-| LBU₽ messaging rewards | not enabled | MessageProofClaim is currently non-minting. |
+| LBUв‚Ѕ messaging rewards | not enabled | MessageProofClaim is currently non-minting. |
+| CENORA forward utility conversion | internal smoke passed | 1 LBUв‚Ѕ -> 1 CENORA prototype utility conversion passed in controlled internal testing. |
+| CENORA reverse utility conversion | internal smoke passed | 1 CENORA -> 1 LBUв‚Ѕ prototype redeem flow passed after canonical confirmation. |
+| CENORA pending/confirmed separation | validated in controlled smoke | Confirmed LBUв‚Ѕ did not increase immediately after redeem submission. |
+| CENORA redeem index digest | matched mesh after confirmation | Redeem index digest changed consistently and matched the mesh after confirmation. |
 
 ## Internal prototype validation
 
@@ -73,12 +77,22 @@ The next public demo should capture:
 - Restart persistence: internal prototype validation.
 - Redacted JVM archive: internal prototype validation.
 - No plaintext in PC/JVM archive/logs: validated in controlled test.
-- LBU₽ messaging rewards: not enabled.
+- LBUв‚Ѕ messaging rewards: not enabled.
+- CENORA forward utility conversion: internal smoke passed.
+- CENORA reverse utility conversion: internal smoke passed.
+- CENORA pending/confirmed separation: validated in controlled smoke.
+- CENORA redeem index digest: matched mesh after confirmation.
+- CENORA_FORWARD_SMOKE_OK
+- CENORA_REVERSE_SMOKE_OK
+- CENORA_NO_FAKE_CONFIRMED_BALANCE_OK
+- CENORA_REDEEM_INDEX_DIGEST_MATCH_OK
 - Limitations: not audited, not production wallet release, not production messenger security, no private seed data public.
 
 These are internal prototype validations and should not be interpreted as public production readiness, security audit, or deployment guarantee.
 
-The public reference demos are intentionally minimal and do not claim production networking, production messenger security, end-to-end encryption, LBU₽ rewards, wallet, transaction, or privacy behavior.
+The CENORA smoke results are internal prototype evidence and should not be interpreted as audited production DEX readiness, legal compliance, public token sale, or exchange listing.
+
+The public reference demos are intentionally minimal and do not claim production networking, production messenger security, end-to-end encryption, LBUв‚Ѕ rewards, wallet, transaction, or privacy behavior.
 
 ## Messenger MVP validation
 
@@ -109,3 +123,4 @@ This remains internal prototype validation and does not claim production messagi
 ## Evidence policy
 
 Future test reports should include logs, screenshots, demo video links, and reproducible steps so that external reviewers can inspect what was tested and how the results were captured.
+

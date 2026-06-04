@@ -95,6 +95,8 @@ Safe wording:
 
 Avoid claiming production messaging readiness, end-to-end encryption, or live messaging rewards.
 
+The internal prototype also includes a documented CENORA utility conversion smoke path, but this remains outside the core NLnet protocol scope and is not presented as a production DEX or financial product.
+
 ## Wallet and transaction evidence
 
 Wallet recovery and transaction flow can be mentioned as internal Android prototype milestones.

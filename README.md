@@ -1,4 +1,4 @@
-# ColorChain
+﻿# ColorChain
 
 ColorChain is an independent mobile-first peer-to-peer protocol stack for resilient decentralized communication and state synchronization across unstable or restricted networks.
 
@@ -43,6 +43,7 @@ ColorChain is currently an early working prototype with:
 - same-hash block propagation between Android emulator and physical Samsung phone;
 - seed phrase restore / wallet recovery path;
 - transaction flow;
+- CENORA prototype utility conversion flow;
 - Messenger MVP foundation;
 - experimental Messenger E2E encrypted-v1 path in the internal Android/JVM prototype;
 - advisory AI trust metadata design.
@@ -54,6 +55,7 @@ Recent internal prototype milestones:
 - repaired and validated seed phrase restore / wallet recovery path;
 - initial Messenger MVP foundation with signed message envelopes, delivery acknowledgements, local persistence, redacted JVM archival metadata, and non-minting MessageProofClaim prototype;
 - experimental Messenger E2E encrypted-v1 path validated in controlled live/offline internal tests; this remains prototype-stage and unaudited.
+- LBU₽ -> CENORA and CENORA -> LBU₽ prototype utility conversion smoke passed in controlled internal testing.
 
 ## Goal
 
@@ -113,6 +115,8 @@ Messenger E2E encrypted-v1 evidence note:
 - [docs/evidence-transaction-flow.md](docs/evidence-transaction-flow.md)
 - [docs/evidence-messenger-e2e-v1.md](docs/evidence-messenger-e2e-v1.md)
 - [docs/wallet-and-transactions.md](docs/wallet-and-transactions.md)
+- [docs/cenora-utility-flow.md](docs/cenora-utility-flow.md)
+- [docs/evidence-cenora-dex-smoke.md](docs/evidence-cenora-dex-smoke.md)
 - [docs/messenger-mvp.md](docs/messenger-mvp.md)
 - [docs/nlnet-resubmission-draft.md](docs/nlnet-resubmission-draft.md)
 - [docs/roadmap.md](docs/roadmap.md)
@@ -144,3 +148,4 @@ Both reproducible demos include negative/tamper checks so reviewers can inspect 
 This repository is released under the MIT License.
 
 Project names, marks, and branding are not licensed as trademarks under the MIT License. See [TRADEMARKS.md](TRADEMARKS.md).
+

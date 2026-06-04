@@ -45,6 +45,15 @@ It is not a production wallet release, security audit, or guarantee of safety fo
 
 Repairing seed restore and transaction flow strengthens the path toward user-controlled mobile network utility. It supports the longer-term goal of letting users recover local identity and exercise network actions from mobile devices without relying on a central platform.
 
+## CENORA utility conversion
+
+CENORA utility conversion is documented separately:
+
+- [CENORA Utility Flow](cenora-utility-flow.md)
+- [CENORA Utility Conversion Smoke Evidence](evidence-cenora-dex-smoke.md)
+
+This is prototype-stage utility conversion evidence. It is not a production DEX, audited financial system, public token sale, or exchange listing claim.
+
 ## Safety note
 
 Do not reuse demo seed phrases. No real wallet seed/private key is published.
